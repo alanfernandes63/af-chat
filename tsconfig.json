@@ -1,4 +1,7 @@
 {
     "extends": "expo/tsconfig.base",
-    "compilerOptions": {}
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react"
+    }
 }
