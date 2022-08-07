@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { Text } from "react-native";
-import Container from "./style";
+import { Container } from "./style";
+import InputPhoneNumber from "./src/components/InputPhoneNumber";
 
-export default function App() {
+const App: React.FC = () => {
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
   return (
     <Container>
-      <Text>Open up App.js to start working on your appa!</Text>
       <StatusBar style="auto" />
+      <InputPhoneNumber value={phoneNumber} onChangeText={setPhoneNumber} />
     </Container>
   );
-}
+};
+
+export default App;
